@@ -705,6 +705,9 @@ footer p {
 .img-wrapper:hover img {
     transform: scale(1.1) rotate(2deg);
 }
+.img-wrapper:active img {
+    transform: scale(1.1) rotate(2deg);
+}
 
 /* Scroll to Top Button Refined */
 .back-to-top {
