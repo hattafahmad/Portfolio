@@ -222,20 +222,6 @@ nav {
     gap: 1rem;
 }
 
-.btn {
-    padding: 0.8rem 2rem;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: var(--transition);
-}
-
-.btn-primary {
-    background-color: var(--primary-color);
-    color: white;
-    border: 2px solid var(--primary-color);
-}
-
 .one {
     animation: a 1s ease-in-out;
     animation-timeline: view();
@@ -269,6 +255,22 @@ nav {
     }
 
 }
+
+.btn {
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    border: 2px solid var(--primary-color);
+}
+
+
 
 .btn-primary:hover {
     background-color: transparent;
@@ -589,6 +591,7 @@ footer p {
     .img-wrapper {
         width: 280px;
         height: 280px;
+        transform: translateY(7%);
     }
 
     .section-title {
@@ -597,6 +600,15 @@ footer p {
     }
 
 }
+@media screen and (max-width: 400px) {
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;          /* Full width for small screens */
+        padding: 10px 15px;   /* Adjust padding */
+        font-size: 14px;      /* Smaller text */
+    }
+}
+
 
 .three {
     position: relative;
