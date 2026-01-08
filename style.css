@@ -502,6 +502,9 @@ nav {
 .skill-card:hover::before {
     opacity: 1;
 }
+.skill-card:active:before {
+    opacity: 1;
+}
 
 .skill-icon {
     width: 80px;
@@ -607,6 +610,10 @@ nav {
 }
 
 .project-card:hover .project-placeholder-img {
+    transform: scale(1.1);
+}
+
+.project-card:active .project-placeholder-img {
     transform: scale(1.1);
 }
 
