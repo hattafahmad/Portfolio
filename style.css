@@ -492,6 +492,13 @@ nav {
         0 0 20px rgba(108, 99, 255, 0.2);
 }
 
+.skill-card:active {
+    transform: translateY(-15px) scale(1.02);
+    border-color: rgba(108, 99, 255, 0.5);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4),
+        0 0 20px rgba(108, 99, 255, 0.2);
+}
+
 .skill-card:hover::before {
     opacity: 1;
 }
@@ -577,6 +584,12 @@ nav {
 }
 
 .project-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 15px 45px rgba(108, 99, 255, 0.2);
+    border-color: var(--primary-color);
+}
+
+.project-card:active {
     transform: translateY(-15px) scale(1.02);
     box-shadow: 0 15px 45px rgba(108, 99, 255, 0.2);
     border-color: var(--primary-color);
