@@ -110,6 +110,9 @@ nav {
     min-height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    /* display: flex;
+    align-items: center; */
     padding-top: 80px;
     position: relative;
     overflow: hidden;
@@ -799,7 +802,7 @@ footer p {
     }
 }
 
-@media screen and (min-width: 400px) {
+@media (max-width: 400px) {
     .nav-links {
         display: flex;
         flex-direction: column;
@@ -885,7 +888,7 @@ footer p {
     }
 
     .touch {
-        left: 10% !important;
+        left: 30% !important;
     }
 
     .btn-primary,
