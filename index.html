@@ -86,6 +86,8 @@
             <span>CSS3</span>
             <span>JavaScript</span>
             <span>Bootstrap</span>
+            <span>Tailwind CSS</span>
+            <span>ReactJS</span>
           </div>
         </div>
 
@@ -99,6 +101,8 @@
           <div class="tech-tags">
             <span>Python</span>
             <span>Django</span>
+            <span>NodeJS</span>
+            <span>ExpressJS</span>
           </div>
         </div>
 
@@ -112,6 +116,9 @@
           <div class="tech-tags">
             <span>SQLite</span>
             <span>MySQL</span>
+            <span>Supabase</span>
+            <span>Neon( PostgreSQL)</span>
+            <span>MongoDB</span>
           </div>
         </div>
 
@@ -130,27 +137,363 @@
       </div>
     </div>
   </section>
+  <style>.experience-cards{
+    position:relative;
+    max-width:1000px;
+    margin:auto;
+}
+
+.experience-cards::before{
+    content:"";
+    position:absolute;
+    left:40px;
+    top:0;
+    width:3px;
+    height:100%;
+    background:linear-gradient(#8b5cf6,#c026d3);
+}.experience-section{
+    position:relative;
+    padding:120px 8%;
+    background:#0b1020;
+    overflow:hidden;
+}
+
+.experience-section::before{
+    content:"";
+    position:absolute;
+    width:700px;
+    height:700px;
+    background:#9d4edd;
+    filter:blur(180px);
+    opacity:.15;
+    top:-200px;
+    left:-150px;
+}
+
+.experience-section::after{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:#c77dff;
+    filter:blur(180px);
+    opacity:.12;
+    right:-100px;
+    bottom:-100px;
+}.experience-cards{
+    position:relative;
+    max-width:1000px;
+    margin:auto;
+}
+
+.experience-cards::before{
+    content:"";
+    position:absolute;
+    left:38px;
+    top:20px;
+    width:3px;
+    height:calc(100% - 40px);
+
+    background:linear-gradient(
+        to bottom,
+        #6d28d9,
+        #a855f7,
+        #d946ef,
+        #a855f7
+    );
+
+    box-shadow:
+        0 0 8px #a855f7,
+        0 0 18px rgba(168,85,247,.4);
+}.experience-card{
+
+    position:relative;
+    margin-left:90px;
+    margin-bottom:45px;
+
+    background:rgba(255,255,255,.04);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:24px;
+
+    padding:35px;
+
+    transition:.4s;
+}.experience-card{
+
+    position:relative;
+    margin-left:90px;
+    margin-bottom:45px;
+
+    background:rgba(255,255,255,.04);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:24px;
+
+    padding:35px;
+
+    transition:.4s;
+}.experience-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:18px;
+
+    height:18px;
+
+    background:#d946ef;
+
+    border-radius:50%;
+
+    left:-60px;
+
+    top:45px;
+
+    border:4px solid #0b1020;
+
+    box-shadow:
+    0 0 12px #d946ef,
+    0 0 30px #d946ef;
+}.timeline-date{
+
+    padding:10px 22px;
+
+    border-radius:50px;
+
+    background:rgba(181,23,255,.15);
+
+    border:1px solid #b517ff;
+
+    color:#d946ef;
+
+    font-weight:600;
+
+    box-shadow:0 0 15px rgba(181,23,255,.3);
+}.experience-company{
+
+    color:#c026d3;
+
+    font-weight:700;
+
+    margin-top:8px;
+}.experience-list li::before{
+
+    content:"›";
+
+    color:#d946ef;
+
+    font-size:28px;
+
+    font-weight:bold;
+}.experience-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:24px;
+
+    padding:1px;
+
+    background:linear-gradient(
+    45deg,
+    transparent,
+    #b517ff,
+    transparent);
+
+    -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+
+    mask-composite:exclude;
+
+    opacity:0;
+
+    transition:.4s;
+}
+
+.experience-card:hover::after{
+    opacity:1;
+}.experience-card:hover::before{
+    transform:scale(1.25);
+
+    box-shadow:
+        0 0 0 8px rgba(217,70,239,.18),
+        0 0 18px #d946ef,
+        0 0 35px #c026d3,
+        0 0 60px #a855f7;
+
+    transition:.35s;
+}.experience-card{
+    position: relative;
+    margin-left: 90px;
+    margin-bottom: 45px;
+    background: rgba(255,255,255,.04);
+    backdrop-filter: blur(20px);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:24px;
+    padding:35px;
+    transition:.4s;
+}
+
+/* Neon Dot */
+.experience-card::before{
+    content:"";
+    position:absolute;
+
+    width:18px;
+    height:18px;
+
+    border-radius:50%;
+
+    left:-60px;
+    top:42px;
+
+    background:#d946ef;
+
+    border:4px solid #0b1020;
+
+    box-shadow:
+        0 0 0 5px rgba(217,70,239,.15),
+        0 0 12px #d946ef,
+        0 0 25px #d946ef,
+        0 0 45px #a855f7;
+
+    z-index:20;
+}
+</style>
+<style>/* Tablet */
+@media (max-width: 768px) {
+    .experience-section{
+        padding:80px 5%;
+    }
+
+    .experience-cards::before{
+        left:28px;
+    }
+
+    .experience-card{
+        margin-left:65px;
+        padding:25px;
+    }
+
+    .experience-card::before{
+        left:-47px;
+        width:15px;
+        height:15px;
+        top:35px;
+    }
+
+    .timeline-date{
+        padding:8px 16px;
+        font-size:14px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .experience-section{
+        padding:60px 4%;
+    }
+
+    .experience-cards::before{
+        left:18px;
+        width:2px;
+    }
+
+    .experience-card{
+        margin-left:42px;
+        margin-bottom:35px;
+        padding:20px 18px;
+        border-radius:18px;
+    }
+
+    .experience-card::before{
+        left:-32px;
+        width:12px;
+        height:12px;
+        top:28px;
+        box-shadow:
+            0 0 0 4px rgba(217,70,239,.15),
+            0 0 8px #d946ef,
+            0 0 18px #a855f7;
+    }
+
+    .experience-company{
+        font-size:14px;
+    }
+
+    .timeline-date{
+        padding:6px 14px;
+        font-size:12px;
+    }
+
+    .experience-list li::before{
+        font-size:22px;
+    }}</style>
 
   <section id="experience" class="experience-section reveal">
     <div class="container">
-      <h2 class="section-title exp reveal">Work Experience</h2>
-      <div class="timeline">
-        <!-- Experience Item -->
-        <div class="timeline-item reveal rotate three">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
+      <h2 class="section-title exp reveal work-title">Work Experience</h2>
+      <div class="experience-cards">
+
+
+        <div class="experience-card reveal">
+          <div class="experience-card-header">
+            <div>
               <h3>Full Stack Developer</h3>
-              <span class="timeline-date">Nov 2025 - April 2026</span>
+              <p class="experience-company">CodesVista | RWP</p>
             </div>
-            <h4 class="company-name">Astron Hosts</h4>
-            <ul class="experience-list">
-              <li>Developing and maintaining scalable web applications using <strong>Python & Django</strong>.</li>
-              <li>Designing interactive and responsive user interfaces with <strong>HTML, CSS, Bootstrap and JavaScript</strong>.</li>
-              <li>Developed a full-featured <strong>POS System</strong> and <strong>QR Code Attendance System</strong> solution, with other projects mentioned below.</li>
-              <li>Optimizing back-end performance and managing database systems including <strong>MySQL and SQLite</strong>.</li>
-            </ul>
+            <span class="timeline-date">June 2026 – Present</span>
           </div>
+          <ul class="experience-list">
+            <li>Developed and deployed cloud-integrated Office Management Systems using <strong>Python, Django, and MySQL</strong>, delivering secure, scalable, and business-oriented solutions.</li>
+            <li>Built modern, responsive, and interactive web applications using <strong>React.js, JavaScript (ES6+), Tailwind CSS, and Bootstrap 5</strong>, with features such as invoicing, attendance, leave management, dashboards, and role-based access.</li>
+            <li>Mentored and trained students in <strong>React.js, JavaScript, HTML, CSS, and Tailwind CSS</strong>, providing hands-on, project-based learning in web development and modern software engineering practices.</li>
+          </ul>
+        </div>
+
+        <div class="experience-card reveal">
+          <div class="experience-card-header">
+            <div>
+              <h3>Freelance Full Stack Developer</h3>
+              <p class="experience-company">Self-Employed | Remote</p>
+            </div>
+            <span class="timeline-date">April 2026 – May 2026</span>
+          </div>
+          <ul class="experience-list">
+            <li>Developed and deployed cloud-integrated hybrid <strong>Point of Sale (POS)</strong> and <strong>Inventory Management</strong> systems for retail clients using <strong>Python, Django, and Neon DB (PostgreSQL)</strong>.</li>
+            <li>Engineered fast, interactive, and responsive frontend dashboards utilizing <strong>Vanilla JavaScript and Bootstrap 5</strong> for modern UI/UX components and seamless client-side logic.</li>
+            <li>Implemented complex business architectures including <strong>automated barcode scanning</strong>, a <strong>background-buffered global keyboard shortcut system</strong>, <strong>dynamic customer invoicing</strong>, and <strong>automated credit/debt customer ledger systems</strong>.</li>
+          </ul>
+        </div>
+
+        <div class="experience-card reveal">
+          <div class="experience-card-header">
+            <div>
+              <h3>Full Stack Developer</h3>
+              <p class="experience-company">Astron Hosts</p>
+            </div>
+            <span class="timeline-date">Nov 2025 - April 2026</span>
+          </div>
+          <ul class="experience-list">
+            <li>Developing and maintaining scalable web applications using <strong>Python & Django</strong>.</li>
+            <li>Designing interactive and responsive user interfaces with <strong>HTML, CSS, Bootstrap and JavaScript</strong>.</li>
+            <li>Developed a full-featured <strong>Web Applications</strong> and <strong>QR Code Attendance System</strong> solution, with other projects mentioned below.</li>
+            <li>Optimizing back-end performance and managing database systems including <strong>MySQL and SQLite</strong>.</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -164,7 +507,7 @@
         
 
         <!-- Project 2 -->
-        <div class="project-card reveal one">
+        <div class="project-card reveal ">
           <div class="project-img">
             <img class="project-image" src="assets/image-1779314961876.png" alt="Task Management App">
           </div>
@@ -187,7 +530,7 @@
         </div>
 
          <!-- Project 2 -->
-        <div class="project-card reveal three">
+        <div class="project-card reveal ">
           <div class="project-img">
             <img class="project-image" src="assets/image-1779316692034.png" alt="Task Management App">
           </div>
@@ -209,7 +552,7 @@
           </div>
         </div>
 
-        <div class="project-card reveal two">
+        <div class="project-card reveal ">
           <div class="project-img">
             <img class="project-image" src="assets/inventory management ss.png" alt="Quiz website">
           </div>
@@ -230,7 +573,7 @@
         </div>
 
         <!-- Project 1 -->
-        <div class="project-card reveal one">
+        <div class="project-card reveal">
           <div class="project-img">
             <img class="project-image" src="assets/image-1769884468655.png" alt="Courses Website">
           </div>
@@ -252,7 +595,7 @@
         </div>
 
         <!-- Project 2 -->
-        <div class="project-card reveal three">
+        <div class="project-card reveal ">
           <div class="project-img">
             <img class="project-image" src="assets/image-1772800252701.png" alt="Task Management App">
           </div>
@@ -274,7 +617,7 @@
         </div>
 
         <!-- Project 3 -->
-        <div class="project-card reveal two">
+        <div class="project-card reveal">
           <div class="project-img">
             <img class="project-image" src="assets/image-1769884698940.png" alt="Digital Agency Website">
           </div>
@@ -296,7 +639,7 @@
         </div>
 
         <!-- project 4 -->
-        <div class="project-card reveal one">
+        <div class="project-card reveal ">
           <div class="project-img">
             <img class="project-image" src="assets/image-1769884881355.png" alt="tools website">
           </div>
@@ -343,7 +686,7 @@
         </div> -->
 
         <!-- project 6 -->
-        <div class="project-card reveal three">
+        <div class="project-card reveal ">
           <div class="project-img">
             <img class="project-image" src="assets/image-1772800993891.png" alt="Medical Billing website">
           </div>
@@ -365,7 +708,7 @@
         </div>
 
         <!-- project 7 -->
-        <div class="project-card reveal two">
+        <div class="project-card reveal ">
           <div class="project-img">
             <img class="project-image" src="assets/image-1772883245455.png" alt="Quiz website">
           </div>
@@ -389,7 +732,132 @@
       </div>
     </div>
   </section>
+<style>/* Card */
+.card{
+    position: relative;
+    background: rgba(22, 28, 48, 0.95);
+    border: 1px solid rgba(168, 85, 247, 0.18);
+    border-radius: 18px;
+    padding: 22px;
+    overflow: hidden;
+    transition: .45s ease;
+    backdrop-filter: blur(15px);
+    cursor: pointer;
+}
 
+/* Left Neon Line */
+.card::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom,#d946ef,#8b5cf6);
+    transition: .4s;
+}
+
+/* Glow */
+.card::after{
+    content: "";
+    position: absolute;
+    inset: -40%;
+    background: radial-gradient(circle,#a855f733 0%,transparent 70%);
+    opacity: 0;
+    transition: .45s;
+}
+
+/* Hover */
+.card:hover{
+    transform: translateY(-8px);
+    border-color: #c026d3;
+    box-shadow:
+        0 0 20px rgba(192,38,211,.25),
+        0 0 60px rgba(139,92,246,.18);
+}
+
+.card:hover::before{
+    width: 6px;
+    box-shadow: 0 0 20px #d946ef;
+}
+
+.card:hover::after{
+    opacity: 1;
+}
+
+/* Icon Box */
+.card-icon{
+    width: 55px;
+    height: 55px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(168,85,247,.12);
+    border: 1px solid rgba(168,85,247,.25);
+    color: #d946ef;
+    font-size: 24px;
+    transition: .4s;
+}
+
+.card:hover .card-icon{
+    background: linear-gradient(135deg,#d946ef,#8b5cf6);
+    color: #fff;
+    transform: rotate(-8deg) scale(1.08);
+    box-shadow: 0 0 18px rgba(217,70,239,.45);
+}
+
+/* Title */
+.card h3{
+    color:#fff;
+    font-size:20px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.card:hover h3{
+    color:#e879f9;
+}
+
+/* Subtitle */
+.card p{
+    color:#a8b3cf;
+    transition:.3s;
+}
+
+.card:hover p{
+    color:#d6d8e5;
+}
+
+/* Number Badge */
+.card .badge{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:rgba(168,85,247,.15);
+    color:#d946ef;
+    font-weight:700;
+    transition:.4s;
+}
+
+.card:hover .badge{
+    background:#d946ef;
+    color:#fff;
+    box-shadow:0 0 18px rgba(217,70,239,.5);
+}
+
+/* Small Text */
+.card span{
+    color:#8f96b5;
+    transition:.3s;
+}
+
+.card:hover span{
+    color:#ffffff;
+}</style>
   <a href="https://wa.me/923335697998" class="whatsapp-float" target="_blank">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
   </a>

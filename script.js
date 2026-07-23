@@ -120,4 +120,82 @@ document.addEventListener('DOMContentLoaded', () => {
             bgGlow.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
         });
     });
+
+    // Projects Circular Slider
+    const sliderTrack = document.querySelector('.slider-track');
+    const sliderCards = document.querySelectorAll('.slider-track .project-card');
+    const prevBtn = document.querySelector('.slider-prev');
+    const nextBtn = document.querySelector('.slider-next');
+    const dotsContainer = document.querySelector('.slider-dots');
+
+    let currentIndex = 0;
+    const totalSlides = sliderCards.length;
+
+    if (totalSlides > 0) {
+        sliderCards.forEach((_, i) => {
+            const dot = document.createElement('span');
+            dot.classList.add('slider-dot');
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(i));
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = document.querySelectorAll('.slider-dot');
+
+        function updateSlider() {
+            const percentagePerSlide = 100 / totalSlides;
+            sliderTrack.style.transform = `translateX(-${currentIndex * percentagePerSlide}%)`;
+            sliderCards.forEach(card => card.classList.remove('active'));
+            sliderCards[currentIndex].classList.add('active');
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[currentIndex].classList.add('active');
+        }
+
+        function goToSlide(index) {
+            currentIndex = index;
+            if (currentIndex < 0) currentIndex = totalSlides - 1;
+            if (currentIndex >= totalSlides) currentIndex = 0;
+            updateSlider();
+        }
+
+        function nextSlide() {
+            goToSlide(currentIndex + 1);
+        }
+
+        function prevSlide() {
+            goToSlide(currentIndex - 1);
+        }
+
+        if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+        if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+
+        // Touch swipe support
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        sliderTrack.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        sliderTrack.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+
+        function handleSwipe() {
+            const diff = touchStartX - touchEndX;
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) {
+                    nextSlide();
+                } else {
+                    prevSlide();
+                }
+            }
+        }
+
+        // Initialize first slide as active
+        sliderCards[0].classList.add('active');
+    }
 });
+
+
